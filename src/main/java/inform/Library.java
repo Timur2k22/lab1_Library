@@ -8,11 +8,11 @@ import products.*;
 
 public class Library {
 
-    public static ArrayList<Book> books = new ArrayList<>();
-    public static ArrayList<Student> students = new ArrayList<>();
-    public static ArrayList<Professor> professors = new ArrayList<>();
+    public ArrayList<Book> books = new ArrayList<>();
+    public ArrayList<Student> students = new ArrayList<>();
+    public ArrayList<Professor> professors = new ArrayList<>();
 
-    public static MutableTreeNode getSudentNodes() {
+    public MutableTreeNode getSudentNodes() {
         DefaultMutableTreeNode studentnodes = new DefaultMutableTreeNode("Студенты");
         for (Student student : students) {
             studentnodes.add(student.getNode());
@@ -20,7 +20,7 @@ public class Library {
         return studentnodes;
     }
 
-    public static MutableTreeNode getTeachersNodes() {
+    public MutableTreeNode getTeachersNodes() {
         DefaultMutableTreeNode professornodes = new DefaultMutableTreeNode("Преподаватели");
         for (Professor professor : professors) {
             professornodes.add(professor.getNode());
